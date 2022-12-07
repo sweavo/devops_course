@@ -46,3 +46,22 @@ def calculate( operator_name, operand_1, operand_2):
     else:
         return operand_1 * operand_2
 
+def split_program_line(line):
+    """ get the operator and operands from a program line 
+    
+    >>> split_program_line('calc x 1 2')
+    ('x', 1, 2)
+    """
+    _calc, operator_name, operand_1, operand_2 = line.split()
+    return operator_name,int(operand_1), int(operand_2)
+
+
+accumulator=0
+program = parse_file('step_2.txt')
+for line in program:
+    operator_name, operand_1, operand_2 = split_program_line(line)
+    result = calculate(operator_name, operand_1, operand_2)
+    accumulator+=result
+    print(result)
+print(f'Answer: {accumulator}')
+
