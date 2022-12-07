@@ -4,7 +4,15 @@
 
 import doctest
 
-#def
+def parse_file(filename):
+    """ Hint 1: For reading the lines from the file you may want to use 
+        file.read.splitlines to build a list of lines.
+
+        >>> len(parse_file('step_2.txt'))
+        1000
+    """
+    with open(filename,'r') as fp:
+        return fp.read().splitlines()
 
 def calculate( operator_name, operand_1, operand_2):
     """ 
