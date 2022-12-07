@@ -4,15 +4,6 @@
 
 import doctest
 
-def load_program(filename):
-    """ Hint 1: For reading the lines from the file you may want to use 
-        file.read.splitlines to build a list of lines.
-
-        >>> len(load_program('step_2.txt'))
-        1000
-    """
-    with open(filename,'r') as fp:
-        return fp.read().splitlines()
 
 def calculate( operator_name, operand_1, operand_2):
     """ 
@@ -45,6 +36,16 @@ def calculate( operator_name, operand_1, operand_2):
         return operand_1 / operand_2
     else:
         return operand_1 * operand_2
+
+def load_program(filename):
+    """ Hint 1: For reading the lines from the file you may want to use 
+        file.read.splitlines to build a list of lines.
+
+        >>> len(load_program('step_2.txt'))
+        1000
+    """
+    with open(filename,'r') as fp:
+        return fp.read().splitlines()
 
 def split_program_line(line):
     """ get the operator and operands from a program line 
