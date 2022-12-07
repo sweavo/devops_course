@@ -1,7 +1,11 @@
+""" Workshop 1 exercise: calculator
+    Steve & Tinashe 
+    
+    Mostly the session was taken up getting connected to liveshare!
+
+    @ Tinashe, you can see the progression from what you last saw to here in git
 
 """
-"""
-
 import doctest
 
 
