@@ -64,10 +64,14 @@ def execute_program(program):
         operator_name, operand_1, operand_2 = split_program_line(line)
         yield calculate(operator_name, operand_1, operand_2)
 
-accumulator=0
-program = load_program('step_2.txt')
-for result in execute_program(program):
-    accumulator+=result
-    print(result)
-print(f'Answer: {accumulator}')
+def main():
+    """
+    >>> main()
+    Answer: 1449679.3057730473
 
+    """
+    accumulator=0
+    program = load_program('step_2.txt')
+    for result in execute_program(program):
+        accumulator+=result
+    print(f'Answer: {accumulator}')
