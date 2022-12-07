@@ -70,8 +70,6 @@ def main():
     Answer: 1449679.3057730473
 
     """
-    accumulator=0
     program = load_program('step_2.txt')
-    for result in execute_program(program):
-        accumulator+=result
+    accumulator=sum(execute_program(program))
     print(f'Answer: {accumulator}')
