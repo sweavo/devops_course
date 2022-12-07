@@ -4,11 +4,11 @@
 
 import doctest
 
-def parse_file(filename):
+def load_program(filename):
     """ Hint 1: For reading the lines from the file you may want to use 
         file.read.splitlines to build a list of lines.
 
-        >>> len(parse_file('step_2.txt'))
+        >>> len(load_program('step_2.txt'))
         1000
     """
     with open(filename,'r') as fp:
@@ -57,7 +57,7 @@ def split_program_line(line):
 
 
 accumulator=0
-program = parse_file('step_2.txt')
+program = load_program('step_2.txt')
 for line in program:
     operator_name, operand_1, operand_2 = split_program_line(line)
     result = calculate(operator_name, operand_1, operand_2)
