@@ -73,3 +73,6 @@ def main():
     program = load_program('step_2.txt')
     accumulator=sum(execute_program(program))
     print(f'Answer: {accumulator}')
+
+if __name__ == "__main__":
+    main()
