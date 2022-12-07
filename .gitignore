@@ -1,0 +1,8 @@
+.bash_funcs
+.bashrc
+.epprc
+.grepfuncs.rc
+.inputrc
+.promptrc
+__pycache__/
+
