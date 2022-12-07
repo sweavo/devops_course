@@ -55,12 +55,18 @@ def split_program_line(line):
     _calc, operator_name, operand_1, operand_2 = line.split()
     return operator_name,int(operand_1), int(operand_2)
 
+def execute_program(program):
+    """ given a program, execute it and yield the results of all the calculations
+    >>> list(execute_program(['calc x 2 3','calc + 1 4']))
+    [6, 5]
+    """
+    for line in program:
+        operator_name, operand_1, operand_2 = split_program_line(line)
+        yield calculate(operator_name, operand_1, operand_2)
 
 accumulator=0
 program = load_program('step_2.txt')
-for line in program:
-    operator_name, operand_1, operand_2 = split_program_line(line)
-    result = calculate(operator_name, operand_1, operand_2)
+for result in execute_program(program):
     accumulator+=result
     print(result)
 print(f'Answer: {accumulator}')
